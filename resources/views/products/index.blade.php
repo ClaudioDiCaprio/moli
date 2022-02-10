@@ -21,18 +21,18 @@
             <td>{{$product->name}}</td>
             <td>{{$product->weight}}</td>
             <td>{{$product->cooking_time}}</td>
-            <td>
+            <td >
                 <a href="{{route("products.show", $product->id)}}"><button type="button" class="btn btn-primary">Visualizza</button></a>
-                <a href="{{route("products.edit", $product->id)}}"><button type="button" class="btn btn-warning mx-3">Modifica</button></a>
+                <a href="{{route("products.edit", $product->id)}}"><button type="button" class="btn btn-warning mx-1">Modifica</button></a>
                 <form action="{{route("products.destroy", $product->id)}}" method="POST">
                   @csrf
                   @method("DELETE")
-                  <button type="submit" class="btn btn-danger">Elimina</button>
+                  <button type="submit" class="btn btn-danger mt-3">Elimina</button>
               </form>
               
                 
             </td>
-          </tr>
+          </tr> 
         @endforeach
         </tbody>
       </table>
