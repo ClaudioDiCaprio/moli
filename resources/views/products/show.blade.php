@@ -3,6 +3,7 @@
 @section('pageContent')
 <h1>{{$product->name}}</h1>
 <img src="{{$product->image}}" alt="{{$product->name}}">
+<h3>{{$product->description}}</h3>
 <p>
     {!!$product->description!!}
 </p>

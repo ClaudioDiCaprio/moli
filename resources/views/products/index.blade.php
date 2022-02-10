@@ -3,6 +3,7 @@
 @section('pageContent')
     <h1>Lista Prodotti</h1>
     <a href="{{route("products.create")}}"><button type="button" class="btn btn-success ">Aggiungi un nuovo prodotto</button></a>
+   
     <table class="table mt-5">
         <thead>
           <tr>
@@ -22,6 +23,14 @@
             <td>{{$product->cooking_time}}</td>
             <td>
                 <a href="{{route("products.show", $product->id)}}"><button type="button" class="btn btn-primary">Visualizza</button></a>
+                <a href="{{route("products.edit", $product->id)}}"><button type="button" class="btn btn-warning mx-3">Modifica</button></a>
+                <form action="{{route("products.destroy", $product->id)}}" method="POST">
+                  @csrf
+                  @method("DELETE")
+                  <button type="submit" class="btn btn-danger">Elimina</button>
+              </form>
+              
+                
             </td>
           </tr>
         @endforeach
