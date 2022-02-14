@@ -28,9 +28,7 @@
                   @csrf
                   @method("DELETE")
                   <button type="submit" class="btn btn-danger mt-3">Elimina</button>
-              </form>
-              
-                
+              </form>  
             </td>
           </tr> 
         @endforeach
